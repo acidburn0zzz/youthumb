@@ -1,0 +1,38 @@
+<div layout="row">
+    
+    <md-input-container class="url-input"> 
+		<label>Youtube Url</label>
+		<input type="text" ng-model="main.youthumbInput" ng-change="main.getYouthumb()">
+	</md-input-container>
+	
+</div>
+
+<div layout="row">
+    
+</div>
+<md-divider></md-divider>
+<div layout="row">
+    <md-tabs md-stretch-tabs="always" md-no-ink md-selected="watch.selectedIndex" ng-if="watch.youthumbs"> 
+        
+        <md-tab ng-disabled="watch.disabled['maxres']" label="MAXRES">
+            <img id="maxres" md-swipe-left="watch.selectedIndex = 1"  class="youthumbs responsive-img"  ng-src="{{ watch.youthumbs['maxres'] }}">
+        </md-tab>
+        
+        <md-tab ng-disabled="watch.disabled['standard']" label="STANDARD">
+            <img id="standard" md-swipe-left="watch.selectedIndex = 2" md-swipe-right="watch.selectedIndex = 0" class="youthumbs responsive-img"  ng-src="{{ watch.youthumbs['standard'] }}">
+        </md-tab>
+        
+        <md-tab ng-disabled="watch.disabled['hq']" label="HQ">
+            <img id="hq" md-swipe-left="watch.selectedIndex = 3" md-swipe-right="watch.selectedIndex = 1" class="youthumbs responsive-img" ng-src="{{ watch.youthumbs['hq'] }}">
+        </md-tab>
+        
+        <md-tab ng-disabled="watch.disabled['mq']" label="MQ">
+            <img id="mq" md-swipe-left="watch.selectedIndex = 4" md-swipe-right="watch.selectedIndex = 2" class="youthumbs responsive-img" ng-src="{{ watch.youthumbs['mq'] }}">
+        </md-tab>
+        
+        <md-tab label="DEFAULT">
+            <img md-swipe-right="watch.selectedIndex = 3" class="youthumbs responsive-img" ng-src="{{ watch.youthumbs['default'] }}">
+        </md-tab>
+        
+    </md-tabs>
+</div>

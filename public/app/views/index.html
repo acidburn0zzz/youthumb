@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>YouTube Thumbnail Finder</title>
+    <meta name="Description" content="Enter a YouTube url to find the YouTube Thubnail. Easiest way to find youtube thumbnail image.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    
+    <!-- JS -->
+    <!-- load angular and agular-route -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+    
+    <!-- controllers -->
+    <script type="text/javascript" src="app/controllers/mainController.js"></script>
+    <script type="text/javascript" src="app/controllers/watchController.js"></script>
+    
+    <!-- services -->
+    <script type="text/javascript" src="app/services/youthumbService.js"></script>
+    
+    <!-- main angular app files -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/app.routes.js"></script>
+
+</head>
+<body ng-app="thumbApp" ng-controller="mainController as main">
+    <!-- Navbar/Toolbar -->
+	<div layout="row">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h1 style="margin: auto;"><a href="/">Youthumb</a></h1>
+			</div>
+		</md-toolbar>
+	</div>
+    
+    <!-- Ng view injected here -->
+    <md-content>
+        <div ng-view></div>
+    </md-content>
+    	
+</body>
+</html>

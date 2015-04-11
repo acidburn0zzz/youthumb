@@ -1,0 +1,49 @@
+body
+{
+	font-family: 'Roboto', sans-serif;
+}
+h1 
+{
+	font-size: 4.7vw;
+  	line-height: 4.62rem;
+  	margin: 2.1rem 0 1.68rem 0;
+}
+.title-input
+{
+	color: rgba(0, 0, 0, 0.7);
+	margin: auto;
+}
+.url-input
+{
+	width: 70%;
+  	text-align: center;
+  	margin: auto;
+}
+md-input-container.md-default-theme .md-input
+{
+	color: rgba(33, 150, 243, 1);
+	text-align: center;
+	font-size: 1.25rem;
+	border-color: rgba(33, 150, 243, 0.5);
+}
+md-input-container.md-default-theme label
+{
+	font-size: 1.25rem;
+	color: rgba(33, 150, 243, 0.55);
+}
+
+.responsive-img
+{
+	max-width: 100%;
+  	height: auto;
+  	display: block;
+}
+.youthumbs
+{
+	display: block;
+	margin: auto;
+	margin-top: 5vw;
+}
+md-tabs.md-default-theme md-tab {
+  color: rgba(0, 0, 0, 0.8);
+}

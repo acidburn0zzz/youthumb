@@ -1,0 +1,17 @@
+{
+  "name": "youthumb",
+  "version": "1.0.0",
+  "description": "A angular website to get the thumbnail from a youtube video",
+  "main": "server.js",
+  "keywords": [
+    "youtube",
+    "thumbnail",
+    "youthumb"
+  ],
+  "author": "Vegard Bjørsvik",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.3",
+    "morgan": "^1.5.2"
+  }
+}
