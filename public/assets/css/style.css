@@ -47,3 +47,14 @@ md-input-container.md-default-theme label
 md-tabs.md-default-theme md-tab {
   color: rgba(0, 0, 0, 0.8);
 }
+.error 
+{
+	color: #FFFFFF;
+    background-color: #C03030;
+    font-size: 16px;
+    margin: auto;
+    padding: 15px;
+ 	margin-bottom: 20px;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+}
