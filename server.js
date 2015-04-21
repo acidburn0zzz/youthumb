@@ -14,6 +14,10 @@ app.use(express.static(__dirname + '/public'));
 
 // ROUTES FOR OUR API
 
+// API ROUTES
+var apiRoutes = require('./app/routes/api')(app, express);
+app.use('/api', apiRoutes);
+
 // MAIN CATCHALL ROUTE
 // SEND USERS TO FRONTEND APPLICATION
 app.get('*', function(req, res) {
