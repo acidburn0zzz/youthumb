@@ -33,40 +33,16 @@ angular.module('youthumbService', [])
     youthumbFactory.valid = function(youtube_id, callback) {
         $http.get('https://gdata.youtube.com/feeds/api/videos/'+youtube_id)
             .success(function(data, status){
-                callback(youtube_id, true);
+                callback(true);
             })
             .error(function(data, status) {
-                callback(youtube_id, false);
+                callback(false);
             });
     };
     
     // build thumbnai links
     youthumbFactory.build = function(youtube_id) {
-        var youimg_url_start = "https://i.ytimg.com/vi/";
-    
-        //these two may not exist
-        var youimg_url_endmax = "/maxresdefault.jpg";
-        var youimg_url_endsd = "/sddefault.jpg";
-        //Always exist
-        var youimg_url_endmq = "/mqdefault.jpg";
-        var youimg_url_endhq = "/hqdefault.jpg";
-        var youimg_url_enddefault = "/default.jpg";
-    
-        var image_urlmax = youimg_url_start + youtube_id + youimg_url_endmax;
-        var image_urlsd = youimg_url_start + youtube_id + youimg_url_endsd;
-        var image_urlhq = youimg_url_start + youtube_id + youimg_url_endhq;
-        var image_urldef = youimg_url_start + youtube_id + youimg_url_enddefault;
-        var image_urlmq = youimg_url_start + youtube_id + youimg_url_endmq;
-    
-        var thumbnails = {
-            maxres: image_urlmax,
-            standard: image_urlsd,
-            hq: image_urlhq,
-            mq: image_urlmq,
-            default: image_urldef
-        };
-
-         return thumbnails;
+        return $http.get('/api/youthumb/'+youtube_id);
     };
     
     return youthumbFactory; 
