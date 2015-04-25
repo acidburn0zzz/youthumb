@@ -9,21 +9,22 @@ angular.module('youthumbService', [])
     youthumbFactory.stripLink = function(youtube_url) {
         var youtube_id = '';
 
-        var n1 = youtube_url.indexOf('&');
-        var n2 = youtube_url.indexOf('v=');
+        var n1 = youtube_url.indexOf('&v=');
+        var n2 = youtube_url.indexOf('?v=');
         var n3 = youtube_url.indexOf('be/');
-        var n4 = youtube_url.indexOf('?');
+        var n4 = youtube_url.indexOf('v/');
+        var n5 = youtube_url.indexOf('ed/');
     
-        if (n3 != -1) {
-            if (n4 != -1) {
-        		youtube_id = youtube_url.substring(n3+3,n3+14);
-        	} else {
-        		youtube_id = youtube_url.substring(n3+3);
-        	}
+        if (n5 != -1) {
+        	youtube_id = youtube_url.substring(n5+3,n5+14);
+        } else if (n3 != -1) {
+        	youtube_id = youtube_url.substring(n3+3, n3+14);
+        } else if (n4 != -1) {
+            youtube_id = youtube_url.substring(n4+2, n4+13);
         } else if (n1 != -1) {
-        	youtube_id = youtube_url.substring(n2+2, n2+13);
+            youtube_id = youtube_url.substring(n3+3, n3+14);
         } else {
-        	youtube_id = youtube_url.substring(n2+2);
+        	youtube_id = youtube_url.substring(n2+3, n2+14);
         }
         
         return youtube_id;
