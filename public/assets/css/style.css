@@ -42,7 +42,6 @@ md-input-container.md-default-theme label
 {
 	display: block;
 	margin: auto;
-	margin-top: 5vw;
 }
 md-tabs.md-default-theme md-tab {
   color: rgba(0, 0, 0, 0.8);
