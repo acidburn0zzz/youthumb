@@ -51,7 +51,8 @@ var tests = [
   { expectedID: 'LXilEPmkoQY', url: 'http://www.youtube.com/v/LXilEPmkoQY' },
   { expectedID: 'u8nQa1cJyX8', url: 'http://www.youtube.com/watch?argv=xyzxyzxyzxy&v=u8nQa1cJyX8' },
   { expectedID: '0zM3nApSvMg', url: 'youtube.com/watch?feature=feedrec_grec_index&v=0zM3nApSvMg ' },
-  { expectedID: 'y_Rd2hByRyc', url: 'http://www.youtube.com/watch?feature=player_embedded&v=y_Rd2hByRyc' }
+  { expectedID: 'y_Rd2hByRyc', url: 'http://www.youtube.com/watch?feature=player_embedded&v=y_Rd2hByRyc' },
+  { expectedID: '97pWV_vE74k', url: 'https://www.youtube.com/watch?list=RD97pWV_vE74k&v=97pWV_vE74k'}
 ];
 
 test('match example cases', function(t) {

@@ -22,7 +22,7 @@ angular.module('youthumbService', [])
         } else if (n4 != -1) {
             youtube_id = youtube_url.substring(n4+2, n4+13);
         } else if (n1 != -1) {
-            youtube_id = youtube_url.substring(n3+3, n3+14);
+            youtube_id = youtube_url.substring(n1+3, n1+14);
         } else {
         	youtube_id = youtube_url.substring(n2+3, n2+14);
         }
