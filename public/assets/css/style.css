@@ -57,3 +57,11 @@ md-tabs.md-default-theme md-tab {
   	border: 1px solid transparent;
   	border-radius: 4px;
 }
+.github-link
+{
+	opacity: 0.5;
+}
+.github-link:hover
+{
+	opacity: 0.8;
+}
