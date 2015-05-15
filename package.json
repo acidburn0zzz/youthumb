@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A angular website to get the thumbnail from a youtube video",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kuzat/youthumb.git"
+  },
   "scripts": {
     "test": "node test/test.js"
   },
