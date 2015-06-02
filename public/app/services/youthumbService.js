@@ -32,9 +32,12 @@ angular.module('youthumbService', [])
     
     // find out if its valid id
     youthumbFactory.valid = function(youtube_id, callback) {
-        $http.get('https://gdata.youtube.com/feeds/api/videos/'+youtube_id)
+        $http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_id+'&key={API-Key}')
             .success(function(data, status){
-                callback(true);
+                if (data.pageInfo.totalResults == 1)
+                    callback(true);
+                else
+                    callback(false);
             })
             .error(function(data, status) {
                 callback(false);

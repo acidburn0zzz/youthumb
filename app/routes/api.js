@@ -23,7 +23,7 @@ module.exports = function(app, express) {
 
 			else {
 
-				res.status(400).send("Error: not a valid youtube id");
+				res.status(404).send("Error: not a valid youtube id");
 
 			}
 
