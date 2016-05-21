@@ -20,10 +20,10 @@ angular.module('watchController', [])
                 // build the youthumb link
                 Youthumb.build(vm.youtube_id)
                     .success(function(data) {
-                        vm.youthumbs = data;
+                        vm.youthumbs = data.items[0].snippet.thumbnails;
                     })
                     .error(function(data) {
-                        vm.error = data;
+                        vm.error = "Dunno some error";
                     });
 
             }

@@ -2,6 +2,8 @@ angular.module('youthumbService', [])
 
 .factory('Youthumb', function($http) {
     
+    var youtube_key = 'API_KEY';
+
     // create a new object
     var youthumbFactory = {};
     
@@ -32,7 +34,7 @@ angular.module('youthumbService', [])
     
     // find out if its valid id
     youthumbFactory.valid = function(youtube_id, callback) {
-        $http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_id+'&key={API-Key}')
+        $http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_id+'&key='+youtube_key)
             .success(function(data, status){
                 if (data.pageInfo.totalResults == 1)
                     callback(true);
@@ -46,7 +48,7 @@ angular.module('youthumbService', [])
     
     // build thumbnai links
     youthumbFactory.build = function(youtube_id) {
-        return $http.get('/api/youthumb/'+youtube_id);
+        return $http.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_id+'&key='+youtube_key);
     };
     
     return youthumbFactory; 
